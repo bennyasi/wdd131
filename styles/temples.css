@@ -1,0 +1,138 @@
+:root {
+    --main-color: #3498db;
+    --text-size: 16px;
+    
+    --heading-font: 'Times Roman', serif;
+    --paragraph-font: 'Arial', Sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    border: solid #4e16a7; /* Maintains sharp contrast */
+    background-color: #f3f9ff; /* Light background for readability */
+    color: #212121; /* Text color ensures sufficient contrast */
+}
+
+/* Header */
+header {
+    background-color: #000000; /* Black for strong contrast */
+    color: #ffffff; /* White text for clarity */
+    padding: 15px; /* Better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; /* Adaptive height */
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+    display: block;
+    background-color: #000000;
+    border: 1px solid #ffffff; /* Added border for visibility */
+    color: #ffffff; /* Contrast with the button's background */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px; /* Added padding for a clickable area */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 60px; /* Reduced gap for proximity */
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul li a {
+    color: #1a73e8; /* Accessible blue for hyperlinks */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    width: 90%;
+    margin: 1.5% auto;
+    background: #ffffff;
+    padding: 20px; /* Added padding for comfortable reading */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Visual separation */
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+    color: #212121; /* Ensure text contrast */
+}
+
+/* Grid Layout for Images */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; /* Slightly reduced gap for proximity */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery figure {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px; /* Adaptive height for better responsiveness */
+    object-fit: cover;
+    border: 1px solid #dddddd; /* Border for visual clarity */
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #212121; /* Strong contrast for legibility */
+}
+
+.gallery figure:hover figcaption {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Dark gray for contrast without pure black */
+    color: #e0e0e0; /* Light gray for softer readability */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+footer .modified {
+    color: #ffd700; /* Gold for emphasis, meets contrast standards */
+}

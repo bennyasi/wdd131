@@ -1,0 +1,66 @@
+
+/* Media Queries for Responsiveness */
+
+/* For screens larger than 600px (tablet and up) */
+@media only screen and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #menu-toggle {
+        display: none; /* Hide hamburger button */
+    }
+
+    #menu {
+        display: flex !important; /* Show the menu by default */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For screens smaller than 600px (mobile devices) */
+/* For screens smaller than 600px (mobile devices) */
+@media only screen and (max-width: 599px) {
+    #menu {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Add space between items */
+        text-align: center; /* Center items */
+        width: 100%; /* Full width */
+        background-color: #333; /* Background color */
+        position: absolute;
+        top: 50px; /* Below the header */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu.open {
+        display: flex; /* Change from block to flex for proper layout */
+        flex-direction: column;
+        align-items: center; /* Center items */
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger button on mobile */
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .gallery-container {
+        max-width: 90%; /* Adjust for smaller screens */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
