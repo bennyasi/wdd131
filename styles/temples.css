@@ -1,139 +1,138 @@
-:root {
-    --main-color: #3498db;
-    --text-size: 16px;
-    
-    --heading-font: 'Times New Roman', serif;
-    --paragraph-font: 'Arial', sans-serif;
-}
-
-
 * {
+    --primary-color: #013468;
+    --primary-font-color: white;
+}
+
+
+body {  
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    min-height: 1vh;
+}
+
+header{
+    grid-column: 1/3;
+    color: #ddd;
+    background-color: var(--primary-color);
+    padding: 1em 0 0;
+}
+
+header h1 {
+    padding: .5em 1em;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 80%;
-    border: solid #4e16a7; /* Maintains sharp contrast */
-    background-color: #f3f9ff; /* Light background for readability */
-    color: #212121; /* Text color ensures sufficient contrast */
-}
-
-/* Header */
-header {
-    background-color: #000000; /* Black for strong contrast */
-    color: #ffffff; /* White text for clarity */
-    padding: 15px; /* Better spacing */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px; /* Adaptive height */
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-/* Menu Toggle Button */
-#menu-toggle {
-    display: block;
-    background-color: #000000;
-    border: 1px solid #ffffff; /* Added border for visibility */
-    color: #ffffff; /* Contrast with the button's background */
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 5px 10px; /* Added padding for a clickable area */
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 60px; /* Reduced gap for proximity */
-}
-
-nav ul li {
-    display: block;
-}
-
-nav ul li a {
-    color: #1a73e8; /* Accessible blue for hyperlinks */
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Area */
 main {
-    width: 90%;
-    margin: 1.5% auto;
-    background: #ffffff;
-    padding: 20px; /* Added padding for comfortable reading */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Visual separation */
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 40px;
-    color: #212121; /* Ensure text contrast */
-}
-
-/* Grid Layout for Images */
-.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px; /* Slightly reduced gap for proximity */
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    
+    max-width: 1500px;
 }
-
-.gallery figure {
+h2 {
     text-align: center;
-    margin-top: 20px;
 }
 
-.gallery img {
-    width: 100%;
-    height: 180px; /* Adaptive height for better responsiveness */
-    object-fit: cover;
-    border: 1px solid #dddddd; /* Border for visual clarity */
+img {
+    max-width: 250px;
 }
 
-.gallery figcaption {
-    margin-top: 8px;
-    font-weight: bold;
-    color: #212121; /* Strong contrast for legibility */
+figure {
+    margin: 1em auto;
 }
 
-.gallery figure:hover figcaption {
-    text-decoration: underline;
+figcaption {
+    text-align: center;
 }
 
-/* Footer */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 footer {
-    background-color: #333333; /* Dark gray for contrast without pure black */
-    color: #e0e0e0; /* Light gray for softer readability */
+    grid-column: 1/3;
+    color: #fff;
+    padding: .5em .5em 2em;
+    background-color: #555;
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    height: auto;
-    margin-bottom: 5px;
 }
 
-footer .modified {
-    color: #ffd700; /* Gold for emphasis, meets contrast standards */
+#lastModified {
+    color: #fffb00;
+}
+
+
+/* ========== HAMBURGUER MENU ========== */
+
+#menu {
+    font-size: 1.5rem;
+    padding: .1em .2em;
+    background-color:  var(--primary-color);
+    color: var(--primary-font-color);
+    position: fixed;
+    right: .7em;
+    top: 1.6em;
+    border: 1px solid #002e5b;
+    border-radius: .1em;
+}
+
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "✕";
+}
+
+nav, a{
+    margin: 0;
+}
+
+nav a {
+    padding: 1em;
+    flex: 1 1 100%;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px solid var(--primary-color);
+}
+nav a:hover {
+    border-bottom: 3px solid yellow;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #013468;
+    text-align: center;
+    position: fixed;
+    right: 1em;
+    top: 2.4em;
+    width: 12em;
+    border-radius: 0 0 .5em .5em;
+}
+
+nav a {
+    display: none;
+    font-weight: 500;
+    color: var(--primary-font);
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #ffca38 ;
+    text-decoration: underline 2px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 800;
+    border-radius: 0 0 .5em .5em;
+    
+}
+
+.open, .open a {
+    display: block;
 }
