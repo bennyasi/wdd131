@@ -2,9 +2,10 @@
     --main-color: #3498db;
     --text-size: 16px;
     
-    --heading-font: 'Times Roman', serif;
-    --paragraph-font: 'Arial', Sans-serif;
+    --heading-font: 'Times New Roman', serif;
+    --paragraph-font: 'Arial', sans-serif;
 }
+
 
 * {
     margin: 0;
