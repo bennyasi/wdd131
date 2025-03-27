@@ -1,0 +1,81 @@
+/* General styles */
+:root {
+    --primary-color: #026440;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --accent-color: #FFA500;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Data & Weather Boxes */
+.data-box, .weather {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Media Query for Wider Screens */
+@media (min-width: 37.5rem) {
+    .hero img, .data {
+        border-bottom: none;
+        vertical-align: bottom;
+    }
+
+    .weather img {
+        display: none;
+    }
+
+    .data, .weather {
+        position: absolute;
+        padding: 1rem 2rem;
+        color: var(--accent-color);
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+}
