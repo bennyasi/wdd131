@@ -1,24 +1,16 @@
-/* Global Styles */
-:root {
-    --primary-color: #026440;
-    --secondary-color: #f4f4f4;
-    --text-color: #333;
-    --accent-color: #FFA500;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
+/* Global Styles - Removed :root */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #f4f4f4; /* Previously --secondary-color */
+    color: #333; /* Previously --text-color */
     line-height: 1.6;
 }
 
 /* Header Styling */
 header {
-    background-color: var(--primary-color);
+    background-color: #026440; /* Previously --primary-color */
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -38,7 +30,7 @@ header {
     max-width: 800px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Data Box */
@@ -48,7 +40,7 @@ header {
     margin: 20px auto;
     max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .data-box ul {
@@ -63,43 +55,29 @@ header {
 /* Weather Section */
 .weather {
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: #026440;
     color: white;
     padding: 1.5rem;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 400px;
-    position: relative;
 }
 
-/* Adding ::after pseudo-element for weather icon */
-.weather h2::after {
-    content: " ☁️";
+/* Removed ::after pseudo-element */
+.weather h2 {
+    display: inline-block;
     font-size: 1.5rem;
-    margin-left: 10px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--primary-color);
+    background-color: #026440;
     color: white;
 }
 
 /* Last Modified Date */
 #lastModified {
     font-size: 0.8rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .data-box, .weather {
-        max-width: 90%;
-    }
 }
