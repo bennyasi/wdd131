@@ -1,4 +1,4 @@
-/* General styles */
+/* General Styles */
 :root {
     --primary-color: #026440;
     --secondary-color: #f4f4f4;
@@ -58,7 +58,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Media Query for Wider Screens */
+/* Responsive Design - Larger Screens */
 @media (min-width: 37.5rem) {
     .hero img, .data {
         border-bottom: none;
@@ -70,7 +70,6 @@ footer {
     }
 
     .data, .weather {
-        position: absolute;
         padding: 1rem 2rem;
         color: var(--accent-color);
     }
