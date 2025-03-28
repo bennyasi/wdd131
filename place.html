@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria - Country Page - WDD 131</title>
+    <meta name="description" content="This page is about Nigeria, the country I've selected for my WDD 131 assignment">
+    <meta name="author" content="Etim Benedicta">
+    <link rel="stylesheet" href="styles/place.css"> <!-- Ensure correct path -->
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/nigeria-500.webp" media="(max-width: 750px)">
+                <img src="images/nigeria-large.webp" alt="A landscape view of Nigeria"> 
+            </picture>
+        </div>
+        <div class="data-box">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area: </strong>923,768 km²</li>
+                <li><strong>Population: </strong>223,804,632</li>
+                <li><strong>Capital: </strong>Abuja</li>
+                <li><strong>Languages: </strong>English, Hausa, Yoruba, Igbo</li>
+                <li><strong>Currency: </strong>Nigerian Naira (NGN)</li>
+                <li><strong>Time Zone: </strong>UTC+1</li>
+                <li><strong>Calling Code: </strong>+234</li>
+                <li><strong>Internet TLD: </strong>.ng</li>
+            </ul>
+        </div>
+
+        <!-- FIXED HERO IMAGES -->
+        <div class="hero">
+            <picture>
+                <source srcset="images/lekki-hero-large.webp" media="(min-width: 1000px)">
+                <img src="images/lekki-hero-small.webp" alt="Lekki" width="500" height="500">
+            </picture>
+
+            <picture>
+                <source srcset="images/lagos-hero-large.webp" media="(min-width: 1000px)">
+                <img src="images/lagos-hero-small.webp" alt="Lagos" width="500" height="500">
+            </picture>
+
+            <picture>
+                <source srcset="images/zuma-hero-large.webp" media="(min-width: 1000px)">
+                <img src="images/zuma-hero-small.webp" alt="Zuma Rock" width="500" height="500">
+            </picture>
+
+            <picture>
+                <source srcset="images/hero-medium.webp" media="(min-width: 700px)">
+                <img src="images/hero-medium.webp" alt="Hero Image" width="700" height="394">
+            </picture>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Weather icon" width="100">
+            <ul>
+                <li><strong>Temperature: </strong>30°C</li>
+                <li><strong>Conditions: </strong>Partly Cloudy</li>
+                <li><strong>Wind: </strong>10 km/h</li>
+                <li><strong>Wind Chill: </strong><span id="wind-chill">N/A</span></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> 🌍 Nigeria Travel Guide 🌍 Your Location</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
