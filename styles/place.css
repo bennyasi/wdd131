@@ -1,0 +1,235 @@
+:root {
+    --main-color: #007bff;
+    --secondary-color: #005a31; /* Darker green for better contrast */
+
+    --font-family: Arial, sans-serif;
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+    /* display: flex; */
+    /* flex-direction: column; */
+    min-height: 100vh;
+    box-sizing: border-box;
+    position:relative;
+}
+
+h1 {
+    background: linear-gradient(to bottom, #005a31 95%, #ffffff 5%); /* Green (95%) and white (5%) gradient */
+    color: white; /* White text color for contrast */
+    padding: 20px 30px; /* Adjust padding for spacing around the text */
+    text-align: center; /* Center-align the text */
+    border-radius: 8px; /* Rounded corners for smoothness */
+    transform: translateX(-5%); /* Shift header 5% to the left */
+    font-size: 2.5rem; /* Adjust the font size as per your design */
+    margin: 0; /* Remove any default margin */
+    width: 100%;
+}
+
+
+/* Main Container */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Main content takes remaining space */
+    position: relative;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Hero Image */
+main picture {
+    width: 100%;
+    height: calc(100vh - 120px); /* Adjusted to fit the header and footer height */
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+main picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+section {
+    position: absolute;
+    width: 20%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ddd; /* Add bottom border */
+}
+
+.data-header {
+    background-color:#005a31; /* Background color for Data header */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(-12%); /* Move header 5% to the left */
+}
+
+/* Example of using ::after properly */
+h1::after {
+
+    display: inline-block; /* Ensures the content behaves like an inline element */
+    margin-left: 10px; /* Spacing between the main content and the pseudo-element */
+    color: var(--secondary-color); /* Matches the custom secondary color */
+    font-size: 1.2rem; /* Adjusts size of the pseudo-element */
+}
+
+/* Adding ::after to Data Header */
+.data-header::after {
+
+    font-size: 1rem; /* Icon size adjustment */
+    margin-left: 8px; /* Small spacing for better appearance */
+    color: #ffffff; /* Icon matches the white color of the header */
+}
+
+.data-info {
+    top: 10px; /* Space from top */
+    left: 20px; /* Space from left */
+}
+
+.weather-box {
+    bottom: 20px; /* Space from bottom */
+    right: 20px; /* Space from right */
+}
+
+/* Data Info Section */
+.data-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-info li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}
+
+.data-label {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.data-value {
+    flex: 2;
+    text-align: left;
+}
+
+.weather-header {
+    display: flex; /* Align the header content horizontally */
+    justify-content: flex-start;  /* Center the header items */
+    align-items: center; /* Ensure the icon and text are vertically centered */
+    width: 100%;
+
+
+    background-color: #005a31; /* Background color for Data header */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(-6%); 
+}
+
+.weather-header h2 {
+    font-size: 1.6rem;
+    margin: 0 10px 0 0; /* Reduced margin to keep things tight */
+}
+
+.weather-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Weather Box Section */
+.weather-content p {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0; /* Reduced vertical padding */
+    margin: 0; 
+    width: 88%;
+}
+
+.weather-content {
+    width: 100%; /* Take full width of the section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+}
+
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralize the entire weather box content */
+}
+
+.weather-label {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+
+.weather-value {
+    flex: 2;
+    text-align: left;
+}
+
+/* Add some custom styling for header */
+.data-header h2, .weather-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.weather-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Adjustments for Wider Views */
+@media (min-width: 700px) {
+    .hero {
+        height: 60vh;
+    }
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 700px) {
+    .data-info,
+    .weather-box {
+        position: static; /* Removes absolute positioning */
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Ensures there is space between sections */
+        padding: 1rem;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+}
