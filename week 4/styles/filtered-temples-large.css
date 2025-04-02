@@ -1,25 +1,29 @@
-/* filtered-large-temples.css */
-
 /* Adjust the grid layout for temple cards on larger screens */
 #temple-container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     gap: 30px; /* More space between items */
 }
 
-/* Menu Styles */
+/* Menu styles */
 nav ul {
+    display: flex;
     justify-content: center; /* Centered navigation */
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
 }
 
 /* Adjust the temple card styles for larger screens */
 .temple-card {
     width: 350px; /* Increase card width */
     margin: 0 auto; /* Center the temple cards */
+    text-align: center; /* Center text inside cards */
 }
 
 /* Adjust header font size */
 h1 {
     font-size: 3rem; /* Larger font size for the header */
+    text-align: center; /* Center-align the header */
 }
 
 /* Hide the menu toggle button on large screens */
@@ -29,6 +33,7 @@ h1 {
 
 /* Footer font size adjustments */
 footer {
-    padding: 30px; /* More padding for footer */
+    padding: 30px; /* More padding for the footer */
     font-size: 1.2rem; /* Slightly larger font size */
+    text-align: center; /* Center-align footer text */
 }
