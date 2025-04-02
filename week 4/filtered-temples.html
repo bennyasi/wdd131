@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,13 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/filtered-large-temples.css" media="(min-width: 768px)">
+   
+    <!-- Linking filtered-temples-large.css (for larger screens, min-width: 768px) -->
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
     <script defer src="scripts/filtered-temples.js"></script>
 </head>
-</head>
+
 <body>
     <header>
-        <h1>Temple Gallery</h1>
+        <h1>Temple Album</h1>
         <button id="menu-toggle">☰</button>
         <nav id="menu">
             <button id="home-btn">Home</button>
@@ -30,14 +32,19 @@
     </header>
     
     <main>
-        <section id="temple-container"></section>
+        <!-- Add a heading for the section -->
+        <section id="temple-container">
+            <h2>Temple Cards</h2> <!-- Add a heading to the section -->
+        </section>
     </main>
     
     <footer>
-        <p>&copy; <span id="footer-year"></span> Temple Gallery|Etim Benedicta | Lagos, Nigeria.</p>
+        <p>&copy; <span id="footer-year"></span> Temple Album | Etim Benedicta | Lagos, Nigeria.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
     
     <script src="script.js"></script>
 </body>
+
 </html>
+</body>
