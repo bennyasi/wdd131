@@ -1,0 +1,169 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2d6a4f;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    flex: 1;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#menu a:hover {
+    color: #ffcc00;
+}
+
+/* Temple cards styling */
+#temple-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.temple-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+.temple-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.temple-card p {
+    color: #777;
+    font-size: 1em;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    body {
+        margin: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: left;
+        padding: 20px 50px;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #temple-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .temple-card img {
+        height: 250px;
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 767px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2d6a4f;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 10px;
+    }
+
+    #menu li {
+        margin: 15px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+}
