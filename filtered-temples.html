@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
-    <meta name="description"
-        content="WDD 131 Picture Album Project by [Etim Benedicta], This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests..">
+    <meta name="description" content="WDD 131 Picture Album Project by Etim Benedicta. This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests.">
     <meta name="author" content="Etim Benedicta">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/filtered-large-temples.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
     <script defer src="scripts/filtered-temples.js"></script>
 </head>
-</head>
+
 <body>
     <header>
-        <h1>Temple Gallery</h1>
+        <h1>Temple Album</h1>
         <button id="menu-toggle">☰</button>
         <nav id="menu">
             <button id="home-btn">Home</button>
@@ -28,16 +28,25 @@
             <button id="small-btn">Small</button>
         </nav>
     </header>
-    
+
     <main>
-        <section id="temple-container"></section>
+        <section id="temple-container">
+            <h2>Temple Cards</h2> <!-- Added heading to section -->
+            <!-- Dynamically generated content goes here -->
+        </section>
     </main>
-    
+
     <footer>
-        <p>&copy; <span id="footer-year"></span> Temple Gallery|Etim Benedicta | Lagos, Nigeria.</p>
+        <p>© <span id="footer-year"></span> Temple Album | Etim Benedicta | Lagos, Nigeria.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
+        <!-- CSS Validation Icon -->
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+            </a>
+        </p>
     </footer>
-    
-    <script src="script.js"></script>
+
 </body>
+
 </html>
