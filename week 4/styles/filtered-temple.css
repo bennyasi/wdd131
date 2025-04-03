@@ -198,4 +198,205 @@ footer {
   .temple-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+:root {
+  --main-color: #3498db;
+  --text-size: 16px;
+  --heading-font: 'Times Roman', serif;
+  --paragraph-font: 'Arial', Sans-serif;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  height: 80%;
+  border: solid #4e16a7;
+  background-color: #f3f9ff;
+  color: #212121;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+  display: block;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 60px;
+}
+
+nav ul li a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+  width: 90%;
+  margin: 1.5% auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #212121;
+}
+
+/* Grid Layout for Images */
+#temple-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center; /* align-items: center; */
+  padding: 20px;
+  gap: 20px; /* Slightly reduced gap for proximity */
+
+}
+.temple-card img {
+  width: 100%;
+  max-height: 180px; /* Adaptive height for better responsiveness */
+  object-fit: cover;
+  border-radius: 5px;
+   margin-bottom: 1px;
+   margin-top: 1px; 
+
+
+}
+
+/* Temple Card Styles */
+.temple-card {
+  background: #d5d4dd;
+  border: 2px solid #b0b0b0; /* Slightly darker border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a 3D effect */
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover Effects */
+.temple-card:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+
+
+.temple-card h2 {
+  color: #2c3e50;
+}
+
+.temple-card p {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens larger than 600px */
+@media only screen and (min-width: 600px) {
+  nav ul {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  #menu-toggle {
+      display: none;
+  }
+
+  #menu {
+      display: flex !important;
+  }
+
+  .temple-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For screens smaller than 600px */
+@media only screen and (max-width: 599px) {
+  #menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  #menu.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #menu-toggle {
+      display: block;
+  }
+
+  nav ul li {
+      padding: 10px 0;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .temple-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}}
