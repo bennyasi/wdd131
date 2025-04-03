@@ -1,4 +1,4 @@
-/ Event listener for DOMContentLoaded
+// Event listener for DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
@@ -46,8 +46,7 @@ const temples = [
     dedicated: "2020, May, 2",
     area: 6861,
     alt:"Yigo Guam",
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
   },
   {
     templeName: "Washington D.C.",
@@ -55,8 +54,7 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     alt:"Washington D.C",
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
     templeName: "Lima Perú",
@@ -64,17 +62,15 @@ const temples = [
     dedicated: "1986, January, 10",
     area: 9600,
     alt:"Lima Peru",
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
     templeName: "Mexico City Mexico",
     location: "Mexico City, Mexico",
     dedicated: "1983, December, 2",
     area: 116642,
-    alt:"Maxico City Mexico",
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    alt:"Mexico City Mexico",
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
       templeName: "Antanarivo Madagascar",
@@ -82,46 +78,40 @@ const temples = [
       dedicated: "2025, March, 15",
       area: 10000,
       alt:"Antanarivo Madagascar",
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/antananarivo-madagascar-temple/antananarivo-madagascar-temple-57245-main.jpg"
-    },
-    {
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/antananarivo-madagascar-temple/antananarivo-madagascar-temple-57245-main.jpg"
+  },
+  {
       templeName: "Yigo Guam",
-      location: "Chalan Pale Ramon Lagu, Yigo,  Guam",
+      location: "Chalan Pale Ramon Lagu, Yigo, Guam",
       dedicated: "2022, May, 22",
       area: 6861,
       alt:"Yigo Guam",
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/yigo-guam-temple/yigo-guam-temple-26495-main.jpg"
-    },
-    {
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/yigo-guam-temple/yigo-guam-temple-26495-main.jpg"
+  },
+  {
       templeName: "Quito Ecuador",
       location: "Cumbaya, Quito Ecuador",
       dedicated: "2022, November, 20",
       area: 36780,
       alt:"Quito Ecuador",
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/quito-ecuador-temple/quito-ecuador-temple-31202-main.jpg"
-    },
-    {
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/quito-ecuador-temple/quito-ecuador-temple-31202-main.jpg"
+  },
+  {
       templeName: "Rome Italy",
       location: "Via di Settebagni, Rome Italy",
       dedicated: "2019, March, 10-12",
       area: 41010,
       alt:"Rome Italy",
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
-    },
-    {
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
+  },
+  {
       templeName: "Adelaide Australia",
       location: "Maden, South Adelaide, Australia",
       dedicated: "2000, June, 15",
       area: 10700,
       alt:"Adelaide Australia",
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/adelaide-australia-temple/adelaide-australia-temple-4359-main.jpg"
-    },
-    
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/adelaide-australia-temple/adelaide-australia-temple-4359-main.jpg"
+  }
   // Add more temple objects here...
 ];
 
@@ -134,7 +124,6 @@ function generateTempleCards(templesToDisplay) {
       const card = document.createElement("div");
       card.classList.add("temple-card");
 
-
       // Display temple information above the image and make the name bold
       card.innerHTML = `
           <h2 style="font-weight: bold;">${temple.templeName}</h2>
@@ -146,9 +135,7 @@ function generateTempleCards(templesToDisplay) {
 
       container.appendChild(card);
   });
-  
 }
-
 
 // Initial render for the "Home" menu option (default to displaying all temples)
 generateTempleCards(temples);
@@ -187,3 +174,4 @@ document.querySelector("#new-btn").addEventListener("click", () => filterTemples
 document.querySelector("#large-btn").addEventListener("click", () => filterTemples("Large"));
 document.querySelector("#small-btn").addEventListener("click", () => filterTemples("Small"));
 document.querySelector("#home-btn").addEventListener("click", () => filterTemples("Home"));
+
