@@ -7,7 +7,7 @@
     <title>Temple Album</title>
     <meta name="description" content="WDD 131 Picture Album Project by Etim Benedicta. This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests.">
     <meta name="author" content="Etim Benedicta">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -29,24 +29,26 @@
         </nav>
     </header>
 
-     <main>
+    <main>
         <section id="temple-container">
             <h2>Temple Cards</h2>
             <!-- Temple cards will be dynamically inserted here -->
         </section>
-     </main>
-     
+    </main>
 
     <footer>
         <p>© <span id="footer-year"></span> Temple Album | Etim Benedicta | Lagos, Nigeria.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
         <!-- CSS Validation Icon -->
-        <p>        
     </footer>
 
-    <script src="path/to/your/script.js"></script>
+    <script>
+        // Dynamically set the year
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-
+        // Dynamically set the last modified date
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 
 </html>
