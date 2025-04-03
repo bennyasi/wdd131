@@ -133,8 +133,6 @@ function generateTempleCards(templesToDisplay) {
   templesToDisplay.forEach(temple => {
       const card = document.createElement("div");
       card.classList.add("temple-card");
-       // Show only the first 12 temples
-    const selectedTemples = templesToDisplay.slice(0, 12);
 
 
       // Display temple information above the image and make the name bold
