@@ -1,0 +1,141 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    height: auto; 
+    background-color: #f3f9ff;
+    color: #212121;
+    max-width: 100%; /* Adjusted for better responsiveness */
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+}
+
+/* Form Styling */
+form {
+    max-width: 85%;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 2px solid #4b1da1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4b1da1;
+    padding: 0 10px;
+}
+/* Product name and submit button styling */
+  
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Inputs and Selects */
+select, textarea, input[type="text"], input[type="date"]{
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    /* border: 2px solid #4b1da1; */
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    font-size: 1.5rem;
+}
+
+input[type="radio"] {
+    display: flex;
+}
+
+input:required {
+    border-bottom: solid 8px red;
+}
+
+input:required:valid {
+    border-bottom: solid 8px green;
+}
+
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #4b1da1;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #360c78;
+}
+
+/* Features Section Styling */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; /* Adds space between checkboxes */
+}
+
+.features label {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Overall Rating Radio Buttons */
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    max-width: 100%;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000000;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 15px;
+    width: 98%;
+    margin-top: 20px;
+    height: auto;
+    position: relative;
+}
