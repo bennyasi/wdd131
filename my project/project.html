@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria – A Cultural and Travel Guide</title>
+  <meta name="description" content="Tourist guide with dynamic attraction options.">
+  <meta name="author" content="Etim Benedicta">
+
+  <link rel="stylesheet" href="styles/touris-attraction.css">
+  <link rel="stylesheet" href="styles/touris-attraction-large.css" media="(min-width: 768px)">
+  <script defer src="scripts/touris-attraction.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Nigeria – A Cultural and Travel Guide</h1>
+    <img src="images/nigeria-landscape.jpg" alt="Nigeria landscape" style="width:100%; height:auto;">
+
+    <nav>
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tourist-attractions.html">Tourist Attractions</a></li>
+        <li><a href="culture.html">Culture & Traditions</a></li>
+        <li><a href="weather-travel.html">Weather & Travel Guide</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome to Nigeria</h2>
+      <p>
+        Nigeria is a vibrant and diverse country rich in culture, history, and breathtaking destinations.
+        From bustling cities to natural wonders, there's so much to explore.
+      </p>
+    </section>
+
+    <section id="touris-attraction">
+      <h2>Tourist Attraction Cards</h2>
+      <div id="temple-cards-container"></div>
+    </section>
+
+    <section class="culture">
+      <h2>Culture & Traditions</h2>
+      <p>
+        Nigeria is home to over 250 ethnic groups, each with unique languages, clothing, music, festivals, and cuisine.
+      </p>
+    </section>
+
+    <section class="weather-guide">
+      <h2>Weather & Travel Guide</h2>
+      <p>
+        Current weather in Abuja: 30°C, Sunny 🌞
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 | Etim Benedicta | Lagos, Nigeria.</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
+

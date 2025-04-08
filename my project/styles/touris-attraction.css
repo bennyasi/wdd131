@@ -1,0 +1,69 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+header, footer {
+  background-color: #006400; /* Green color for header/footer */
+  color: white; /* White text for better visibility */
+  padding: 1rem;
+  text-align: center;
+}
+
+nav button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none; /* No border for cleaner look */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #004d00; /* Blue background for buttons */
+  color: white; /* White text on buttons */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav button:hover {
+  background-color: #004d00; /* Darker shade on hover */
+}
+
+#tourist-attraction { /* Correct ID selector */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px; /* Corrected the comma to semicolon */
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card { /* Corrected selector for card */
+  width: 269px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth scale on hover */
+}
+
+.card:hover { /* Corrected selector for hover effect */
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.card img { /* Correct selector for img */
+  width: 100%;
+  height: auto;
+}
+
+.card h3 { /* Corrected selector for title */
+  margin: 0.5rem 0;  /* Space around title */
+  font-size: 1.5em;  /* Larger font for titles */
+}
+
+.card p { /* Corrected selector for paragraph */
+  padding: 0 1rem 1rem; /* Padding for text at bottom */
+  font-size: 1em; /* Normal size for description */
+  color: #333; /* Darker text for readability */
+}

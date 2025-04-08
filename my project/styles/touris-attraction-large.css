@@ -1,0 +1,30 @@
+body {
+    font-size: 18px;
+}
+
+#temple-cards-container {
+    display: flex; /* Added flex display to use flex properties */
+    flex-wrap: wrap; /* Allow wrapping for responsive layouts */
+    justify-content: space-between; /* Space out the cards */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem; /* Optional: add padding for better spacing */
+}
+
+.card {
+    width: calc(30% - 1rem); /* Subtract margin/gap for better alignment */
+    margin-bottom: 1rem; /* Add margin to the bottom of the cards */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: calc(45% - 1rem); /* Change to a two-column layout on smaller screens */
+    }
+}
+
+@media (max-width: 300px) {
+    .card {
+        width: 100%; /* Stack all cards in a single column on very small screens */
+    }
+}
