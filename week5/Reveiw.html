@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <meta name="description" content="----">
+    <meta name="author" content="Etim Benedicta">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+
+</head>
+
+<body>
+
+    <h2>Review Form</h2>
+    <form id="reviewForm">
+        <label for="review">Your Review:</label>
+        <textarea id="review" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="lastReviewTime"></p>
+    <p id="visitCount"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Track the number of visits
+            let visitCount = localStorage.getItem("visitCount") || 0;
+            visitCount++;
+            localStorage.setItem("visitCount", visitCount);
+            document.getElementById("visitCount").innerText = `Number of visits: ${visitCount}`;
+
+            // Track the last review time
+            const lastReviewTime = localStorage.getItem("lastReviewTime");
+            if (lastReviewTime) {
+                document.getElementById("lastReviewTime").innerText = `Last review submitted at: ${new Date(parseInt(lastReviewTime)).toLocaleString()}`;
+            }
+
+            // Store timestamp when form is submitted
+            document.getElementById("reviewForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                localStorage.setItem("lastReviewTime", Date.now());
+                alert("Review submitted successfully!");
+                location.reload(); // Refresh to show updated review time
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span> | Etim Benedicta| Lagos, Nigeria.</p>
+        <p class="lastmodified">Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/form.js" defer></script>
+
+</body>
+
+</html>
