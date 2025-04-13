@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigeria – Tourist & Cultural Hub</title>
+  <meta name="description" content="Discover top tourist attractions, cultural insights, and travel tips in Nigeria." />
+  <meta name="author" content="Etim Benedicta" />
+
+  <link rel="stylesheet" href="styles/Tourist-Attractions.css" />
+  <link rel="stylesheet" href="styles/Tourist-Attractions-large.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <style>
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      padding: 10px 20px;
+      background-color: #016a4f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .filter-buttons button:hover,
+    .filter-buttons button.active {
+      background-color: #00b686;
+    }
+
+    .culture-section {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      align-items: center;
+    }
+
+    .culture-section img {
+      max-width: 250px;
+      border-radius: 8px;
+    }
+
+    .culture-text {
+      max-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+      .culture-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .culture-section img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-top">
+      <figure>
+        <img src="images/logo.jpg" alt="bennyasi Tourist-Culture Hub" loading="lazy" width="250" height="250">
+      </figure>
+    </div>
+
+    <button id="menu" title="Menu Button">☰</button>
+
+    <nav>
+      <ul id="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="tourist-attractions.html">Tourist Attractions</a></li>
+        <li><a href="culture-traditions.html">Culture & Traditions</a></li>
+        <li><a href="weather-travel-guide.html">Weather & Travel Guide</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="culture">
+      <h2>Experience Nigeria's Diversity</h2>
+      <p>Explore Nigeria's ethnic groups, languages, festivals, and unique cuisine.</p>
+
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="calabar">Calabar</button>
+        <button data-filter="igbo">Igbo</button>
+        <button data-filter="yoruba">Yoruba</button>
+        <button data-filter="hausa">Hausa</button>
+      </div>
+
+      <div class="culture-section" data-culture="calabar">
+        <img src="images/calabar-carnival.jpg" alt="Calabar Carnival Parade" loading="lazy">
+        <div class="culture-text">
+          <h3>Calabar Culture</h3>
+          <p>The people of Calabar, mainly of the Efik tribe, are known for their hospitality, colorful traditions, and world-famous Calabar Carnival...</p>
+        </div>
+      </div>
+
+      <div class="culture-section" data-culture="igbo">
+        <img src="images/igbo-culture.jpg" alt="Igbo traditional attire and dance" loading="lazy">
+        <div class="culture-text">
+          <h3>Igbo Culture</h3>
+          <p>The Igbo people are known for their rich traditions including the New Yam Festival, traditional music and dance, and colorful attires like the isiagu...</p>
+        </div>
+      </div>
+
+      <div class="culture-section" data-culture="yoruba">
+        <img src="images/yoruba-culture.jpg" alt="Yoruba traditional festival" loading="lazy">
+        <div class="culture-text">
+          <h3>Yoruba Culture</h3>
+          <p>The Yoruba people celebrate festivals like Eyo and Osun-Osogbo, wear agbada and iro-buba, and have deep-rooted storytelling, drumming, and religion...</p>
+        </div>
+      </div>
+
+      <div class="culture-section" data-culture="hausa">
+        <img src="images/hausa-culture.jpg" alt="Hausa Durbar Horsemen" loading="lazy">
+        <div class="culture-text">
+          <h3>Hausa Culture</h3>
+          <p>The Hausa are known for their Durbar festivals, traditional regalia, music, and strong Islamic influence. Their cuisine includes dishes like tuwo and miyan kuka...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bennyasi Tourist-Culture Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Menu toggle
+    const menuBtn = document.getElementById('menu');
+    const menuList = document.getElementById('menu-list');
+
+    menuBtn.addEventListener('click', () => {
+      menuList.classList.toggle('open');
+      menuBtn.textContent = menuList.classList.contains('open') ? '✖' : '☰';
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    const sections = document.querySelectorAll('.culture-section');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        sections.forEach(section => {
+          const group = section.getAttribute('data-culture');
+          if (filter === 'all' || filter === group) {
+            section.style.display = 'flex';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
