@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bennyasi Tourist Cultural-hub || Home Page</title>
+    <meta name="description" content="Discover top tourist attractions, cultural insights, and travel tips in Nigeria." />
+    <meta name="author" content="Etim Benedicta" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+    <script src="scripts/base.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="Attraction-top">
+            <figure>
+                <img src="images/logo.webp" alt="bennyasi Tourist-Culture Hub" loading="lazy" width="250" height="250">
+            </figure>
+        </div>
+        <button id="menu" title="Menu Button"></button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="culture.html">Culture</a>
+            <a href="tourist.html">Tourist</a>
+            <a href="weather.html">Weather</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main id="tip-main">
+        <section class="attractions">
+            <h2>Top Tourist Locations</h2>
+            <div class="filter-tourist">
+                <label for="locationFilter">Filter by Location:</label>
+                <select id="locationFilter">
+                    <option value="all">All</option>
+                    <option value="abuja">Abuja</option>
+                    <option value="lagos">Lagos</option>
+                    <option value="calabar">Calabar</option>
+                    <option value="obudu">Obudu-Ranch</option>
+                    <option value="yankari">Yankari National Park</option>
+                    <option value="olumo">Olumo Rock</option>
+                    <option value="tinapa">Tinapa Resort</option>
+                </select>
+            </div>
+            <div id="attractions-list">
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/abuja.webp" alt="Aerial view of Abuja" loading="lazy">
+                        <div class="text-section">
+                            <h3>Abuja</h3>
+                            <p>Abuja is the capital city of the Federal Republic of Nigeria, strategically situated at the geographic midpoint of the country. Established as the capital in 1991, Abuja was chosen for its central location, making it accessible from all parts of Nigeria.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/lagos.webp" alt="Lagos skyline and beaches" loading="lazy">
+                        <div class="text-section">
+                            <h3>Lagos</h3>
+                            <p>Lagos is Nigeria’s largest city and a cultural powerhouse. From bustling markets to vibrant nightlife, visitors can enjoy Lekki Conservation Centre, Tarkwa Bay Beach, National Theatre, and the ever-popular Nike Art Gallery.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/calabar.webp" alt="View of Calabar city" loading="lazy">
+                        <div class="text-section">
+                            <h3>Calabar</h3>
+                            <p>Calabar is the capital city of Cross River State in southeastern Nigeria, situated near the Cameroon border. Historically, it served as a significant port during the colonial era, notably linked to the transatlantic slave trade. Today, Calabar is recognized for its rich cultural heritage and is often referred to as the tourism capital of Nigeria.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/obudu.webp" alt="Green hills at Obudu Mountain Resort" loading="lazy">
+                        <div class="text-section">
+                            <h3>Obudu-Ranch</h3>
+                            <p>Obudu Cattle Ranch in Cross River State is a peaceful highland resort offering stunning mountain views, cool climate, hiking trails, and cable cars. It’s perfect for nature lovers and honeymooners.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/yankari.webp" alt="Elephants at Yankari National Park" loading="lazy">
+                        <div class="text-section">
+                            <h3>Yankari National Park</h3>
+                            <p>Yankari National Park in Bauchi is a wildlife sanctuary home to elephants, baboons, lions, and the famous Wikki Warm Spring. It’s a top choice for safaris and eco-tourism adventures in Nigeria.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/olumo.webp" alt="Tourists climbing Olumo Rock" loading="lazy">
+                        <div class="text-section">
+                            <h3>Olumo Rock</h3>
+                            <p>Located in Abeokuta, Olumo Rock is a historical site that served as a refuge during war times. Visitors can explore natural caves, climb the rock, and take in sweeping views of the city below.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="attraction">
+                    <div class="content-flex">
+                        <img src="images/tinapa.webp" alt="Tinapa Resort aerial view" loading="lazy">
+                        <div class="text-section">
+                            <h3>Tinapa Resort</h3>
+                            <p>Tinapa Resort in Calabar, Cross River State, combines business and leisure with features like a shopping complex, film studio, water park, and a scenic lakeside hotel. It's one of Nigeria’s most unique tourism and entertainment hubs.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo-bottom">
+            <figure>
+                <img src="images/logo.webp" alt="logo" loading="lazy" width="250" height="200">
+            </figure>
+        </div>
+        <div class="date-bottom">
+            <p>©<span id="currentyear"></span> Bennyasi Tourist-Culture Hub. All rights reserved</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
